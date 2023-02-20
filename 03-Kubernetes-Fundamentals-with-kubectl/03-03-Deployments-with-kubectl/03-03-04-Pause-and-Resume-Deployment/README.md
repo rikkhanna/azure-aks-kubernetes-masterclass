@@ -5,6 +5,18 @@
   - If we want to make multiple changes to our Deployment, we can pause the deployment make all changes and resume it. 
 - We are going to update our Application Version from **V3 to V4** as part of learning "Pause and Resume Deployments"  
 
+Pause & Resume Deployments in Kubernetes are two commands that allow the Kubernetes user to pause a running deployment, make changes to the deployment, and then resume the deployment with the updated configuration.
+
+`Pause Deployment`: This command pauses the running deployment, preventing any new replicas from being created, but the existing replicas will continue to serve traffic until they are terminated or scaled down. This can be useful for making changes to the deployment, such as updating the image or scaling the deployment.
+
+`Resume Deployment`: This command resumes the paused deployment, allowing new replicas to be created based on the updated configuration. This is useful for when the changes made during the pause are complete, and the deployment can continue serving traffic.
+
+Both of these commands are useful for making changes to a deployment without affecting the availability of the application. By pausing the deployment, changes can be made without any downtime, and by resuming the deployment, the changes can be applied with minimal disruption.
+
+
+
+
+
 ## Step-01: Pausing & Resuming Deployments
 ### Check current State of Deployment & Application
  ```
